@@ -1,19 +1,71 @@
 body {
+    --bg-color: #f0f0f0;
+    --text-color: #1f2937;
+    --surface-color: #ffffff;
+    --button-bg: #2563eb;
+    --button-bg-hover: #1d4ed8;
+    --button-text: #ffffff;
+    --toggle-bg: #e5e7eb;
+    --toggle-text: #111827;
+
     font-family: sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body.dark-mode {
+    --bg-color: #111827;
+    --text-color: #f9fafb;
+    --surface-color: #1f2937;
+    --button-bg: #38bdf8;
+    --button-bg-hover: #0ea5e9;
+    --button-text: #0f172a;
+    --toggle-bg: #374151;
+    --toggle-text: #f9fafb;
 }
 
 .container {
     text-align: center;
+    width: min(90vw, 460px);
+    padding: 32px;
+    border-radius: 8px;
+    background-color: var(--surface-color);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.dark-mode .container {
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+}
+
+.theme-toggle {
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 999px;
+    background-color: var(--toggle-bg);
+    color: var(--toggle-text);
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-1px);
 }
 
 .lotto-numbers {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
+    min-height: 50px;
     margin: 20px 0;
 }
 
@@ -29,7 +81,17 @@ body {
 }
 
 #generate-btn {
+    border: 0;
+    border-radius: 6px;
     padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
     font-size: 1em;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#generate-btn:hover {
+    background-color: var(--button-bg-hover);
+    transform: translateY(-1px);
 }
