@@ -1,48 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <meta name="description" content="로또 번호를 무작위로 생성하고 번호 범위, 확률, 이용 방법을 쉽게 확인할 수 있는 무료 번호 생성 도구입니다.">
+    <meta name="robots" content="index, follow">
+    <title>로또 번호 생성기 | 무료 랜덤 번호 추천 도구</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4969667166387075" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">Dark Mode</button>
-        <h1>Lotto Number Generator</h1>
-        <div class="lotto-numbers" id="lotto-numbers"></div>
-        <button id="generate-btn">Generate Numbers</button>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="주요 메뉴">
+            <a href="#generator">번호 생성</a>
+            <a href="#guide">이용 가이드</a>
+            <a href="#probability">확률 정보</a>
+            <a href="#privacy">개인정보</a>
+            <a href="#contact">문의</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false">Dark Mode</button>
+    </header>
 
-        <form class="contact-form" action="https://formspree.io/f/mkoeeelv" method="POST">
-            <h2>Partnership Inquiry</h2>
-            <label for="partner-name">Name</label>
-            <input id="partner-name" name="name" type="text" autocomplete="name" required>
+    <main class="page-shell">
+        <section class="hero" id="generator">
+            <div class="hero-copy">
+                <p class="eyebrow">무료 랜덤 번호 도구</p>
+                <h1>로또 번호 생성기</h1>
+                <p>1부터 45까지의 숫자 중 중복 없이 6개를 무작위로 뽑아 정렬해 보여줍니다. 번호 선택이 막막할 때 참고용으로 사용할 수 있는 간단한 도구입니다.</p>
+            </div>
 
-            <label for="partner-email">Email</label>
-            <input id="partner-email" name="email" type="email" autocomplete="email" required>
+            <div class="tool-panel" aria-label="로또 번호 생성 도구">
+                <div class="lotto-numbers" id="lotto-numbers" aria-live="polite"></div>
+                <button id="generate-btn" type="button">번호 생성하기</button>
+                <p class="tool-note">생성 결과는 브라우저에서 즉시 계산되며 서버로 전송되지 않습니다.</p>
+            </div>
+        </section>
 
-            <label for="partner-message">Message</label>
-            <textarea id="partner-message" name="message" rows="4" required></textarea>
+        <section class="content-section" id="guide">
+            <h2>이 도구가 제공하는 기능</h2>
+            <div class="feature-grid">
+                <article>
+                    <h3>중복 없는 6개 번호</h3>
+                    <p>각 번호는 1부터 45 사이에서 선택되며, 같은 숫자가 두 번 나오지 않도록 처리합니다.</p>
+                </article>
+                <article>
+                    <h3>오름차순 정렬</h3>
+                    <p>생성된 번호를 바로 확인하기 쉽도록 작은 숫자부터 큰 숫자 순서로 정렬합니다.</p>
+                </article>
+                <article>
+                    <h3>번호대별 색상</h3>
+                    <p>번호 구간에 따라 색상을 다르게 표시해 결과를 한눈에 구분할 수 있게 했습니다.</p>
+                </article>
+            </div>
+        </section>
 
-            <input type="hidden" name="_subject" value="New partnership inquiry">
-            <button class="submit-btn" type="submit">Send Inquiry</button>
-        </form>
+        <section class="content-section" id="probability">
+            <h2>로또 번호와 무작위성 이해하기</h2>
+            <p>로또 번호는 과거 당첨 결과와 관계없이 매 회차 독립적으로 추첨됩니다. 이 페이지의 생성기는 특정 번호의 당첨 가능성을 높인다고 주장하지 않으며, 사용자가 번호를 고를 때 참고할 수 있는 무작위 조합을 제공합니다.</p>
+            <p>좋아하는 숫자, 생일, 기념일처럼 제한된 범위의 숫자만 고르면 조합이 한쪽으로 치우칠 수 있습니다. 무작위 생성기를 함께 사용하면 평소 잘 고르지 않는 번호대까지 포함한 조합을 쉽게 확인할 수 있습니다.</p>
+            <p>이 도구는 오락 및 편의 목적의 무료 서비스입니다. 복권 구매를 권장하거나 수익을 보장하지 않습니다. 번호 선택과 구매 여부는 사용자가 직접 판단해야 합니다.</p>
+        </section>
 
-        <section class="comments-section" aria-label="Comments">
-            <h2>Comments</h2>
+        <section class="content-section" id="faq">
+            <h2>자주 묻는 질문</h2>
+            <details>
+                <summary>생성된 번호가 당첨 확률을 높이나요?</summary>
+                <p>아니요. 모든 조합은 동일한 확률을 가지며, 이 도구는 번호 선택을 돕는 참고용 랜덤 생성기입니다.</p>
+            </details>
+            <details>
+                <summary>개인정보가 저장되나요?</summary>
+                <p>번호 생성 기능은 개인정보를 요구하지 않습니다. 다크 모드 설정만 사용자의 브라우저 localStorage에 저장됩니다.</p>
+            </details>
+            <details>
+                <summary>모바일에서도 사용할 수 있나요?</summary>
+                <p>네. 화면 크기에 맞춰 번호와 콘텐츠가 줄바꿈되도록 구성했습니다.</p>
+            </details>
+        </section>
+
+        <section class="content-section policy-section" id="privacy">
+            <h2>개인정보 및 광고 안내</h2>
+            <p>이 사이트는 무료 도구 운영을 위해 Google AdSense 광고 스크립트를 포함합니다. 광고 제공 과정에서 Google 또는 제3자 광고 파트너가 쿠키를 사용할 수 있습니다.</p>
+            <p>문의 폼을 제출하면 사용자가 입력한 이름, 이메일, 메시지가 Formspree를 통해 전달됩니다. 문의 응답 목적 외에는 해당 정보를 사용하지 않습니다.</p>
+            <p>댓글 기능은 Disqus를 사용합니다. 댓글 작성 시 Disqus의 계정, 쿠키, 개인정보 처리 기준이 적용될 수 있으므로 민감한 개인정보는 댓글에 남기지 마세요.</p>
+        </section>
+
+        <section class="content-section" id="contact">
+            <form class="contact-form" action="https://formspree.io/f/mkoeeelv" method="POST">
+                <h2>제휴 및 문의</h2>
+                <label for="partner-name">이름</label>
+                <input id="partner-name" name="name" type="text" autocomplete="name" required>
+
+                <label for="partner-email">이메일</label>
+                <input id="partner-email" name="email" type="email" autocomplete="email" required>
+
+                <label for="partner-message">문의 내용</label>
+                <textarea id="partner-message" name="message" rows="5" required></textarea>
+
+                <input type="hidden" name="_subject" value="New partnership inquiry">
+                <button class="submit-btn" type="submit">문의 보내기</button>
+            </form>
+        </section>
+
+        <section class="comments-section" aria-label="댓글">
+            <h2>댓글</h2>
+            <p class="comment-guideline">서비스 개선 의견이나 사용 후기를 남길 수 있습니다. 광고성 링크, 개인정보, 부적절한 내용은 삭제될 수 있습니다.</p>
             <div id="disqus_thread"></div>
             <script>
                 (function() {
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://productbuilder1-6.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
+                    var d = document, s = d.createElement("script");
+                    s.src = "https://productbuilder1-6.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
                     (d.head || d.body).appendChild(s);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>댓글을 보려면 JavaScript를 활성화해 주세요. <a href="https://disqus.com/?ref_noscript">Disqus 댓글 안내</a></noscript>
         </section>
-    </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>로또 번호 생성기는 무료 참고 도구이며 복권 구매나 당첨을 보장하지 않습니다.</p>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
