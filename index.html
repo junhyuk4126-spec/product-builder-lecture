@@ -12,6 +12,21 @@
         <h1>Lotto Number Generator</h1>
         <div class="lotto-numbers" id="lotto-numbers"></div>
         <button id="generate-btn">Generate Numbers</button>
+
+        <form class="contact-form" action="https://formspree.io/f/mkoeeelv" method="POST">
+            <h2>Partnership Inquiry</h2>
+            <label for="partner-name">Name</label>
+            <input id="partner-name" name="name" type="text" autocomplete="name" required>
+
+            <label for="partner-email">Email</label>
+            <input id="partner-email" name="email" type="email" autocomplete="email" required>
+
+            <label for="partner-message">Message</label>
+            <textarea id="partner-message" name="message" rows="4" required></textarea>
+
+            <input type="hidden" name="_subject" value="New partnership inquiry">
+            <button class="submit-btn" type="submit">Send Inquiry</button>
+        </form>
     </div>
     <script src="main.js"></script>
 </body>

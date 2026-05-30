@@ -7,6 +7,8 @@ body {
     --button-text: #ffffff;
     --toggle-bg: #e5e7eb;
     --toggle-text: #111827;
+    --border-color: #d1d5db;
+    --input-bg: #ffffff;
 
     font-family: sans-serif;
     display: flex;
@@ -28,6 +30,8 @@ body.dark-mode {
     --button-text: #0f172a;
     --toggle-bg: #374151;
     --toggle-text: #f9fafb;
+    --border-color: #4b5563;
+    --input-bg: #111827;
 }
 
 .container {
@@ -92,6 +96,65 @@ body.dark-mode .container {
 }
 
 #generate-btn:hover {
+    background-color: var(--button-bg-hover);
+    transform: translateY(-1px);
+}
+
+
+.contact-form {
+    display: grid;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.contact-form h2 {
+    margin: 0 0 6px;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.contact-form label {
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 10px 12px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid var(--button-bg);
+    outline-offset: 2px;
+}
+
+.submit-btn {
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
     background-color: var(--button-bg-hover);
     transform: translateY(-1px);
 }
