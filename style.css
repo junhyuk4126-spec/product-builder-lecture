@@ -158,3 +158,31 @@ body.dark-mode .container {
     background-color: var(--button-bg-hover);
     transform: translateY(-1px);
 }
+
+
+.comments-section {
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.comments-section h2 {
+    margin: 0 0 16px;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+#disqus_thread {
+    min-height: 220px;
+}
+
+.comments-section noscript {
+    display: block;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.comments-section a {
+    color: var(--button-bg);
+}
