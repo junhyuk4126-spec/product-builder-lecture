@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Lotto lucky ball favicon">
+  <defs>
+    <radialGradient id="ball" cx="30%" cy="24%" r="72%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.18" stop-color="#fff5c2"/>
+      <stop offset="0.52" stop-color="#f6c343"/>
+      <stop offset="1" stop-color="#e58a18"/>
+    </radialGradient>
+    <linearGradient id="badge" x1="14" y1="12" x2="50" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#172033"/>
+  <circle cx="32" cy="32" r="24" fill="url(#ball)"/>
+  <circle cx="32" cy="32" r="16" fill="#ffffff" opacity="0.92"/>
+  <path d="M22 19c5-6 15-7 22-1" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.72"/>
+  <text x="32" y="40" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800" fill="url(#badge)">7</text>
+  <circle cx="47" cy="18" r="5" fill="#38bdf8"/>
+  <circle cx="17" cy="47" r="4" fill="#b0d840"/>
+</svg>
